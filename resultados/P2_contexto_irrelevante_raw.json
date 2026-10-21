@@ -1,0 +1,16 @@
+[
+    {
+        "titulo": "Ops! página não encontrada",
+        "url": "https://g1.globo.com/erro/",
+        "conteudo": "O endereço abaixo não existe na globo.com https://g1.globo.com/erro/",
+        "links": [
+            "https://www.globo.com?utm_source=barraGCOM",
+            "https://g1.globo.com?utm_source=barraGCOM",
+            "https://ge.globo.com?utm_source=barraGCOM",
+            "https://gshow.globo.com?utm_source=barraGCOM",
+            "https://globoplay.globo.com?utm_source=barraGCOM",
+            "http://www.globo.com/privacidade.html",
+            "http://www.globo.com/todos-os-sites.html"
+        ]
+    }
+]

@@ -1,0 +1,7 @@
+prompt,url,modelo,crawl_success,validacao_aprovada,links_descartados,quarentena,campos_falhos
+P1_contexto_correto,https://g1.globo.com/mt/mato-grosso/noticia/2026/10/20/mae-e-filhotes-de-onca-pintada-sao-flagrados-abracados-no-pantanal-de-mt.ghtml,ollama/qwen2.5:7b,True,False,0,True,__root__
+P2_contexto_correto,https://g1.globo.com/mt/mato-grosso/noticia/2026/10/20/mae-e-filhotes-de-onca-pintada-sao-flagrados-abracados-no-pantanal-de-mt.ghtml,ollama/qwen2.5:7b,True,False,0,True,__root__
+P3_contexto_correto,https://g1.globo.com/mt/mato-grosso/noticia/2026/10/20/mae-e-filhotes-de-onca-pintada-sao-flagrados-abracados-no-pantanal-de-mt.ghtml,ollama/qwen2.5:7b,True,False,0,True,__root__
+P1_contexto_irrelevante,https://g1.globo.com/erro/,ollama/qwen2.5:7b,True,False,0,True,__root__
+P2_contexto_irrelevante,https://g1.globo.com/erro/,ollama/qwen2.5:7b,True,True,0,False,
+P3_contexto_irrelevante,https://g1.globo.com/erro/,ollama/qwen2.5:7b,True,True,0,False,

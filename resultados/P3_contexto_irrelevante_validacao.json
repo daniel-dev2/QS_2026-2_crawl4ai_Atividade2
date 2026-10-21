@@ -1,0 +1,11 @@
+{
+  "prompt": "P3_contexto_irrelevante",
+  "url": "https://g1.globo.com/erro/",
+  "modelo": "ollama/qwen2.5:7b",
+  "crawl_success": true,
+  "validacao_aprovada": true,
+  "erros_validacao": [],
+  "campos_falhos": [],
+  "quarentena": null,
+  "links_descartados": 0
+}

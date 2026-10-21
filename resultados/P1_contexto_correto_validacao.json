@@ -1,0 +1,15 @@
+{
+  "prompt": "P1_contexto_correto",
+  "url": "https://g1.globo.com/mt/mato-grosso/noticia/2026/10/20/mae-e-filhotes-de-onca-pintada-sao-flagrados-abracados-no-pantanal-de-mt.ghtml",
+  "modelo": "ollama/qwen2.5:7b",
+  "crawl_success": true,
+  "validacao_aprovada": false,
+  "erros_validacao": [
+    "O JSON decodificado deve ser um objeto/dicionário, recebido: list."
+  ],
+  "campos_falhos": [
+    "__root__"
+  ],
+  "quarentena": "C:\\Users\\Daniel\\Documents\\Qualidade_de_Software_Atv2\\quarantine\\quarantine_20261021T114423Z_2a8d7171.json",
+  "links_descartados": 0
+}

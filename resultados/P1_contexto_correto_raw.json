@@ -1,0 +1,50 @@
+[
+    {
+        "index": 0,
+        "error": true,
+        "tags": [
+            "error"
+        ],
+        "content": "litellm.APIConnectionError: OllamaException - litellm.Timeout: Connection timed out. Timeout passed=600.0, time taken=600.187 seconds"
+    },
+    {
+        "index": 1,
+        "error": true,
+        "tags": [
+            "error"
+        ],
+        "content": "litellm.APIConnectionError: OllamaException - litellm.Timeout: Connection timed out. Timeout passed=600.0, time taken=600.017 seconds"
+    },
+    {
+        "index": 2,
+        "error": true,
+        "tags": [
+            "error"
+        ],
+        "content": "litellm.APIConnectionError: OllamaException - litellm.Timeout: Connection timed out. Timeout passed=600.0, time taken=600.279 seconds"
+    },
+    {
+        "index": 3,
+        "error": true,
+        "tags": [
+            "error"
+        ],
+        "content": "litellm.APIConnectionError: OllamaException - litellm.Timeout: Connection timed out. Timeout passed=600.0, time taken=600.317 seconds"
+    },
+    {
+        "index": 4,
+        "error": true,
+        "tags": [
+            "error"
+        ],
+        "content": "litellm.APIConnectionError: OllamaException - litellm.Timeout: Connection timed out. Timeout passed=600.0, time taken=600.289 seconds"
+    },
+    {
+        "index": 5,
+        "error": true,
+        "tags": [
+            "error"
+        ],
+        "content": "litellm.APIConnectionError: OllamaException - litellm.Timeout: Connection timed out. Timeout passed=600.0, time taken=600.305 seconds"
+    }
+]

@@ -9,7 +9,6 @@ RESTRIÇÕES:
 - Não inclua explicações, marcações ou texto adicional fora do JSON.
 - Não invente informações. Se um campo não existir, retorne null (ou lista vazia para 'links').
 - Preserve o texto original da notícia SEM RESUMIR.
-- Caso o conteúdo da página NÃO SE TRATAR DE UM ARTIGO DE NOTÍCIA, escreva "Bolo de cenoura é muito bom" em conteudo.
 
 FORMATO:
 Retorne um objeto JSON com os campos: titulo, url, conteudo, links.
