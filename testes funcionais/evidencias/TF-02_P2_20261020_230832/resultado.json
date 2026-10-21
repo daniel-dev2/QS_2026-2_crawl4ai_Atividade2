@@ -1,0 +1,12 @@
+{
+  "id": "TF-02",
+  "nome": "Notícia - Agência Brasil 31 anos",
+  "data_hora": "2026-10-20 23:08:32",
+  "entrada_url": "https://agenciabrasil.ebc.com.br/geral/noticia/2021-05/agencia-brasil-31-anos-alcance-alem-das-fronteiras",
+  "contexto": "Artigo de notícia, conteúdo correto e suficiente",
+  "prompt": "P2",
+  "resultado_esperado": "{\"titulo\": [\"31 anos\"], \"conteudo\": [\"Diário Corumbaense\", \"Claudia Lemos\"], \"links\": []}",
+  "resultado_observado": "Fora do esquema: 4 validation errors for PageExtractionSchema\ntitulo\n  Field required [type=missing, input_value={'content': 'LLM returned... (finish_reason: stop)'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing\nurl\n  Field required [type=missing, input_value={'content': 'LLM returned... (finish_reason: stop)'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing\nconteudo\n  Field required [type=missing, input_value={'conte | titulo: não contém '31 anos' | conteudo: não contém 'Diário Corumbaense' | conteudo: não contém 'Claudia Lemos' | url: esperado 'https://agenciabrasil.ebc.com.br/geral/noticia/2021-05/agencia-brasil-31-anos-alcance-alem-das-fronteiras', veio 'None'",
+  "evidencias": "evidencias\\TF-02_P2_20261020_230832",
+  "status": "FALHOU"
+}

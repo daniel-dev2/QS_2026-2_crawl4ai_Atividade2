@@ -1,0 +1,12 @@
+{
+  "id": "TF-02",
+  "nome": "Notícia - Agência Brasil 31 anos",
+  "data_hora": "2026-10-21 00:44:15",
+  "entrada_url": "https://agenciabrasil.ebc.com.br/geral/noticia/2021-05/agencia-brasil-31-anos-alcance-alem-das-fronteiras",
+  "contexto": "Artigo de notícia, conteúdo correto e suficiente",
+  "prompt": "P2",
+  "resultado_esperado": "{\"titulo\": [\"31 anos\"], \"conteudo\": [\"Diário Corumbaense\", \"Claudia Lemos\"], \"links\": []}",
+  "resultado_observado": "Lista vazia ou só com blocos de erro",
+  "evidencias": "evidencias\\TF-02_P2_20261021_004415",
+  "status": "FALHOU"
+}

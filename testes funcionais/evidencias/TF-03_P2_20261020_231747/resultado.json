@@ -1,0 +1,12 @@
+{
+  "id": "TF-03",
+  "nome": "Artigo - Censura e aparelhamento na Agência Brasil",
+  "data_hora": "2026-10-20 23:17:47",
+  "entrada_url": "https://outraspalavras.net/outrasmidias/censura-e-aparelhamento-na-agencia-brasil/",
+  "contexto": "Artigo jornalístico de outro site, conteúdo correto e suficiente",
+  "prompt": "P2",
+  "resultado_esperado": "{\"titulo\": [\"Censura e aparelhamento\"], \"conteudo\": [\"Agência Nacional\", \"A Hora do Brasil\"], \"links\": []}",
+  "resultado_observado": "Lista vazia ou só com blocos de erro",
+  "evidencias": "evidencias\\TF-03_P2_20261020_231747",
+  "status": "FALHOU"
+}

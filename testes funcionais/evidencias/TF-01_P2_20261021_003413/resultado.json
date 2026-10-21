@@ -1,0 +1,12 @@
+{
+  "id": "TF-01",
+  "nome": "Notícia - Agência Brasil 30 anos",
+  "data_hora": "2026-10-21 00:34:13",
+  "entrada_url": "https://agenciabrasil.ebc.com.br/geral/noticia/2020-05/agencia-brasil-completa-30-anos-de-prestacao-de-servico",
+  "contexto": "Artigo de notícia, conteúdo correto e suficiente",
+  "prompt": "P2",
+  "resultado_esperado": "{\"titulo\": [\"30 anos\"], \"conteudo\": [\"Agência Nacional\", \"Radiobrás\"], \"links\": []}",
+  "resultado_observado": "Fora do esquema: 4 validation errors for PageExtractionSchema\ntitulo\n  Field required [type=missing, input_value={'content': 'LLM returned... (finish_reason: stop)'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing\nurl\n  Field required [type=missing, input_value={'content': 'LLM returned... (finish_reason: stop)'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing\nconteudo\n  Field required [type=missing, input_value={'conte | titulo: não contém '30 anos' | conteudo: não contém 'Agência Nacional' | conteudo: não contém 'Radiobrás' | url: esperado 'https://agenciabrasil.ebc.com.br/geral/noticia/2020-05/agencia-brasil-completa-30-anos-de-prestacao-de-servico', veio 'None'",
+  "evidencias": "evidencias\\TF-01_P2_20261021_003413",
+  "status": "FALHOU"
+}
