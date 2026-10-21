@@ -1,0 +1,27 @@
+{
+  "quarantined_at": "2026-10-21T12:34:40.774577+00:00",
+  "error_type": "ValidationError",
+  "failed_fields": [
+    "content",
+    "conteudo",
+    "index",
+    "tags",
+    "titulo",
+    "url"
+  ],
+  "error_messages": [
+    "Campo 'titulo': Field required",
+    "Campo 'url': Field required",
+    "Campo 'conteudo': Field required",
+    "Campo 'index': Extra inputs are not permitted",
+    "Campo 'tags': Extra inputs are not permitted",
+    "Campo 'content': Extra inputs are not permitted"
+  ],
+  "raw_payload": {
+    "index": 0,
+    "tags": [
+      "error"
+    ],
+    "content": "LLM returned no content (finish_reason: stop)"
+  }
+}

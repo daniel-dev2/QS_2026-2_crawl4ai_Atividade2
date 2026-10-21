@@ -1,0 +1,17 @@
+[
+    {
+        "index": 0,
+        "error": true,
+        "tags": [
+            "error"
+        ],
+        "content": [
+            "{href}",
+            "{\n        \"titulo\": title,\n        \"url\": url,\n        \"conteudo\": content,\n        \"links\": links\n    }",
+            "{page_info['titulo']}",
+            "{page_info['url']}",
+            "{page_info['conteudo'][:100]}",
+            "{page_info['links']}"
+        ]
+    }
+]
