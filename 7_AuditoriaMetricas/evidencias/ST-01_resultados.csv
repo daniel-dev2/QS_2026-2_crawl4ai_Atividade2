@@ -1,0 +1,21 @@
+﻿id,grupo,descricao,esperado,observado,status,campos_com_falha,mensagem
+ST-01-C0,Controle,Payload válido (dict),aceitar,aceitou,PASSOU,,
+ST-01-C0j,Controle,Payload válido (string JSON),aceitar,aceitou,PASSOU,,
+ST-01-A1,JSON malformado,JSON truncado,rejeitar,rejeitou,PASSOU,__root__,"Erro de sintaxe JSON: Unterminated string starting at na linha 1, coluna 191."
+ST-01-A2,JSON malformado,String vazia,rejeitar,rejeitou,PASSOU,__root__,Entrada vazia ou contendo apenas caracteres em branco.
+ST-01-A3,JSON malformado,JSON dentro de cerca Markdown (```json),rejeitar,rejeitou,PASSOU,__root__,"Erro de sintaxe JSON: Expecting value na linha 1, coluna 1."
+ST-01-A4,JSON malformado,Texto livre antes do JSON,rejeitar,rejeitou,PASSOU,__root__,"Erro de sintaxe JSON: Expecting value na linha 1, coluna 1."
+ST-01-B1,Campo ausente,Sem 'url',rejeitar,rejeitou,PASSOU,url,Campo 'url': Field required
+ST-01-B2,Campo ausente,Sem 'titulo' e 'conteudo',rejeitar,rejeitou,PASSOU,conteudo|titulo,Campo 'titulo': Field required
+ST-01-B3,Campo ausente,"Chaves em inglês (title/content), falha F1 da P5",rejeitar,rejeitou,PASSOU,content|conteudo|title|titulo,Campo 'titulo': Field required
+ST-01-B4,Campo ausente,"titulo = null (conflito P2 x esquema, F6)",rejeitar,rejeitou,PASSOU,titulo,"Campo 'titulo': Value error, O campo 'titulo' deve ser do tipo string, recebido: NoneType"
+ST-01-U1,URL inválida,Protocolo inválido,rejeitar,rejeitou,PASSOU,url,"Campo 'url': Value error, A URL de origem 'protocolo_invalido://sem-host' possui protocolo inválido. Esperado 'http' ou 'https'."
+ST-01-U2,URL inválida,Sem host,rejeitar,rejeitou,PASSOU,url,"Campo 'url': Value error, A URL de origem 'https://' não possui domínio/host válido."
+ST-01-U3,URL inválida,Protocolo ftp://,rejeitar,rejeitou,PASSOU,url,"Campo 'url': Value error, A URL de origem 'ftp://exemplo.org/arquivo' possui protocolo inválido. Esperado 'http' ou 'https'."
+ST-01-U4,URL inválida,Link inválido dentro de 'links' (deve sanear),aceitar,aceitou,PASSOU,,
+ST-01-T1,Tipo incorreto,'links' como string em vez de lista,rejeitar,rejeitou,PASSOU,links,Campo 'links': Input should be a valid list
+ST-01-T2,Tipo incorreto,'conteudo' numérico,rejeitar,rejeitou,PASSOU,conteudo,"Campo 'conteudo': Value error, O campo 'conteudo' deve ser do tipo string, recebido: int"
+ST-01-R1,Formato real,Lista de blocos de erro do Crawl4AI (timeout),rejeitar,rejeitou,PASSOU,__root__,"O JSON decodificado deve ser um objeto/dicionário, recebido: list."
+ST-01-R2,Formato real,"Array vazio [] (P1, página irrelevante)",rejeitar,rejeitou,PASSOU,__root__,"O JSON decodificado deve ser um objeto/dicionário, recebido: list."
+ST-01-S1,Semântico,Página 404 do g1 (aceita como notícia?),rejeitar,aceitou,FALHOU,,
+ST-01-S2,Semântico,Conteúdo trocado por frase de preenchimento,rejeitar,aceitou,FALHOU,,
