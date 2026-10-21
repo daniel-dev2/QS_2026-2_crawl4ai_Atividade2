@@ -1,0 +1,9 @@
+ENTREGA DA PESSOA 7 - AV2 Crawl4AI (Auditoria de fontes, metricas e resultados)
+
+7_AuditoriaMetricas/
+  teste_saida_estruturada.py        Teste ST-01 (com a Pessoa 3). Rodar a partir desta pasta; precisa de pydantic e da pasta 3_EsquemaJsonEValidador ao lado.
+  evidencias/ST-01_resultados.csv   Resultado do ST-01: 18/18 sub-casos estruturais conforme o esperado; 0/2 semanticos (extensao exploratoria, vira o achado B). Total bruto: 18/20.
+  AV2_Pessoa7_consolidado.xlsx      Planilha consolidada: 10 testes, metricas, auditoria de fontes, achados e plano, inconsistencias.
+  AV2_Pessoa7_10_testes.csv         Os 10 testes em CSV.
+
+
