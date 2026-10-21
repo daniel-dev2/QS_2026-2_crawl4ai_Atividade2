@@ -1,0 +1,10 @@
+[
+    {
+        "titulo": "Receita de Bolo de Cenoura",
+        "url": "http://localhost:8765/irrelevante.html",
+        "conteudo": "# Receita de Bolo de Cenoura Endereço da página: http://localhost:8765/irrelevante.html Bata no liquidificador 3 cenouras, 4 ovos e 1 xícara de óleo. Misture com 2 xícaras de farinha e 1 colher de fermento. Asse por 40 minutos em forno médio. Veja também: [mais receitas](http://localhost:8765/receitas.html)",
+        "links": [
+            "http://localhost:8765/receitas.html"
+        ]
+    }
+]

@@ -1,0 +1,18 @@
+{
+  "quarantined_at": "2026-10-21T11:50:49.324185+00:00",
+  "error_type": "ValidationError",
+  "failed_fields": [
+    "titulo"
+  ],
+  "error_messages": [
+    "Campo 'titulo': Value error, O campo 'titulo' deve ser do tipo string, recebido: NoneType"
+  ],
+  "raw_payload": {
+    "titulo": null,
+    "url": "http://localhost:8765/irrelevante.html",
+    "conteudo": "Bolo de cenoura é muito bom",
+    "links": [
+      "http://localhost:8765/receitas.html"
+    ]
+  }
+}

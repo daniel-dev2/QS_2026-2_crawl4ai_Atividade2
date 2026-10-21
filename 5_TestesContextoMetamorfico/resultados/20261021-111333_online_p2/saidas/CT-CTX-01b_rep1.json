@@ -1,0 +1,10 @@
+[
+    {
+        "titulo": null,
+        "url": "http://localhost:8765/irrelevante.html",
+        "conteudo": "Bolo de cenoura é muito bom",
+        "links": [
+            "http://localhost:8765/receitas.html"
+        ]
+    }
+]

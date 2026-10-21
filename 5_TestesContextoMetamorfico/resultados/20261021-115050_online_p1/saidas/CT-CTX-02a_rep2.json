@@ -1,0 +1,12 @@
+[
+    {
+        "titulo": "Prefeitura de Vila Aurora inaugura biblioteca municipal com 120 lugares",
+        "url": "http://localhost:8765/conflitante.html",
+        "conteudo": "# Prefeitura de Vila Aurora inaugura biblioteca municipal com 120 lugares Endereço da página: http://localhost:8765/conflitante.html\n\n* [Educação em Vila Aurora](http://localhost:8765/educacao.html)\n* [Agenda cultural](http://localhost:8765/cultura.html)\n* [Notícias da prefeitura](http://localhost:8765/prefeitura.html)\n\n",
+        "links": [
+            "http://localhost:8765/educacao.html",
+            "http://localhost:8765/cultura.html",
+            "http://localhost:8765/prefeitura.html"
+        ]
+    }
+]
