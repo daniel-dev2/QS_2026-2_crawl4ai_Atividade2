@@ -1,0 +1,14 @@
+[
+  {"id":"CT01","tipo":"funcional","fonte":"fontes/ct01.html","url":"http://localhost:8000/ct01.html",
+   "referencia":{"titulo":"Biblioteca Comunitária Sol Nascente","url":"http://localhost:8000/ct01.html","conteudo":"Funciona de segunda a sexta, das 8h às 17h. Empréstimo de livros gratuito por até 14 dias.","links":["http://localhost:8000/acervo","http://localhost:8000/contato"]}},
+  {"id":"CT02","tipo":"funcional","fonte":"fontes/ct02.html","url":"http://localhost:8000/ct02.html",
+   "referencia":{"titulo":"Caderno Universitário 200 Folhas","url":"http://localhost:8000/ct02.html","conteudo":"Preço R$ 18,90. Em estoque. Capa dura, 10 matérias.","links":["http://localhost:8000/papelaria","http://localhost:8000/carrinho"]}},
+  {"id":"CT03","tipo":"funcional","fonte":"fontes/ct03.html","url":"http://localhost:8000/ct03.html",
+   "referencia":{"titulo":"Semana de Tecnologia 2026","url":"http://localhost:8000/ct03.html","conteudo":"De 18 a 20 de novembro de 2026, no Auditório B. Inscrições gratuitas até 14 de novembro.","links":["http://localhost:8000/eventos/programacao","http://localhost:8000/eventos/inscricao"]}},
+  {"id":"CT04","tipo":"funcional","fonte":"fontes/ct04.html","url":"http://localhost:8000/ct04.html",
+   "referencia":{"titulo":"Novo laboratório de redes é inaugurado","url":"http://localhost:8000/ct04.html","conteudo":"O laboratório possui 20 computadores e foi inaugurado em 3 de setembro.","links":["http://localhost:8000/noticias/estagios"]}},
+  {"id":"CT05","tipo":"sem_evidencia","fonte":"fontes/ct05.html","url":"http://localhost:8000/ct05.html",
+   "referencia":{"titulo":"Página em manutenção","url":"http://localhost:8000/ct05.html","conteudo":"Informação insuficiente: a página informa apenas que está em manutenção.","links":[]}},
+  {"id":"CT06","tipo":"variacao_CT01","fonte":"fontes/ct06.html","url":"http://localhost:8000/ct06.html",
+   "referencia":{"titulo":"Biblioteca Comunitária Sol Nascente","url":"http://localhost:8000/ct06.html","conteudo":"Funciona de segunda a sexta, das 8h às 17h. Empréstimo de livros gratuito por até 14 dias.","links":["http://localhost:8000/acervo","http://localhost:8000/contato"]}}
+]
