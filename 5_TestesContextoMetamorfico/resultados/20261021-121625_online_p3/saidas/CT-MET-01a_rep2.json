@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Prefeitura de Vila Aurora inaugura biblioteca municipal com 120 lugares",
+        "url": "http://localhost:8765/ruido.html",
+        "content": "A Prefeitura de Vila Aurora inaugura no dia 15 de novembro a nova Biblioteca Municipal Carlos Drummond, no centro da cidade. O espaço terá 120 lugares de leitura, acervo de 8 mil livros e uma sala infantil. O prefeito Marcos Teles afirmou que a obra custou R$ 2,5 milhões e foi financiada com recursos próprios do município. A biblioteca funcionará de segunda a sábado, das 8h às 20h, com entrada gratuita.",
+        "links": [
+            "http://localhost:8765/livraria.html",
+            "http://localhost:8765/promocoes.html",
+            "http://localhost:8765/educacao.html",
+            "http://localhost:8765/cultura.html",
+            "http://localhost:8765/prefeitura.html"
+        ]
+    }
+]

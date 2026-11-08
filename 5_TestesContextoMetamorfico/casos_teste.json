@@ -1,0 +1,119 @@
+{
+  "porta_servidor_local": 8765,
+  "frase_regra_nao_noticia_p2": "Bolo de cenoura é muito bom",
+  "casos": [
+    {
+      "id": "CT-CTX-01",
+      "tipo": "contexto",
+      "titulo": "Contexto correto vs irrelevante vs ausente",
+      "variantes": [
+        {
+          "id": "CT-CTX-01a",
+          "pagina": "base.html",
+          "prompt": "@SELECIONADO",
+          "descricao": "Contexto correto e suficiente (linha de base): notícia fictícia completa",
+          "checagens": {
+            "titulo_contem": ["biblioteca"],
+            "url_contem": ["localhost:8765/base.html"],
+            "conteudo_contem": ["15 de novembro", "120"],
+            "links_contem": ["educacao.html", "cultura.html", "prefeitura.html"]
+          }
+        },
+        {
+          "id": "CT-CTX-01b",
+          "pagina": "irrelevante.html",
+          "prompt": "@SELECIONADO",
+          "descricao": "Contexto irrelevante (receita de bolo, não é notícia): não pode inventar dados da notícia; no P2 vale a regra 'não é notícia'",
+          "checagens": {
+            "titulo_nao_contem": ["biblioteca", "vila aurora"],
+            "conteudo_nao_contem": ["biblioteca", "vila aurora", "marcos teles"],
+            "url_contem": ["localhost:8765/irrelevante.html"],
+            "regra_nao_noticia_p2": true
+          }
+        },
+        {
+          "id": "CT-CTX-01c",
+          "pagina": "vazia.html",
+          "prompt": "@SELECIONADO",
+          "descricao": "Contexto ausente (página vazia): o sistema não pode fabricar um registro; falha controlada é o comportamento esperado",
+          "checagens": {
+            "aceita_sem_saida": true,
+            "nao_deve_ter_registro_valido": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "CT-CTX-02",
+      "tipo": "contexto",
+      "titulo": "Contexto conflitante (data da inauguração e correção no fim da página)",
+      "variantes": [
+        {
+          "id": "CT-CTX-02a",
+          "pagina": "conflitante.html",
+          "prompt": "@SELECIONADO",
+          "descricao": "A página diz 15 de novembro e depois corrige para 22 de novembro: a saída deve preservar/sinalizar as duas datas, nunca escolher uma em silêncio",
+          "checagens": {
+            "titulo_contem": ["biblioteca"],
+            "url_contem": ["localhost:8765/conflitante.html"],
+            "datas_conflito": ["15", "22"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "CT-MET-01",
+      "tipo": "metamorfico",
+      "titulo": "Inserção de informação irrelevante (anúncio, menu e curiosidade) na página",
+      "variantes": [
+        {
+          "id": "CT-MET-01a",
+          "pagina": "ruido.html",
+          "prompt": "@SELECIONADO",
+          "descricao": "Mesma notícia da linha de base com ruído inserido: os dados da notícia devem ser os mesmos e o ruído não pode contaminar os campos",
+          "checagens": {
+            "titulo_contem": ["biblioteca"],
+            "url_contem": ["localhost:8765/ruido.html"],
+            "conteudo_contem": ["15 de novembro", "120"],
+            "links_contem": ["educacao.html", "cultura.html", "prefeitura.html"],
+            "links_nao_contem": ["livraria", "promocoes"],
+            "conteudo_revisar_se_contem": ["livraria lua", "marte", "99,00"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "CT-MET-02",
+      "tipo": "metamorfico",
+      "titulo": "Reformulação e mudança de idioma da instrução (derivadas do P2)",
+      "variantes": [
+        {
+          "id": "CT-MET-02b",
+          "pagina": "base.html",
+          "prompt": "met02_parafrase_pt",
+          "somente_com_prompt": "p2",
+          "descricao": "Paráfrase em português do P2: mesmos dados da linha de base e mesmo esquema",
+          "checagens": {
+            "titulo_contem": ["biblioteca"],
+            "url_contem": ["localhost:8765/base.html"],
+            "conteudo_contem": ["15 de novembro", "120"],
+            "links_contem": ["educacao.html", "cultura.html", "prefeitura.html"]
+          }
+        },
+        {
+          "id": "CT-MET-02c",
+          "pagina": "base.html",
+          "prompt": "met02_en",
+          "somente_com_prompt": "p2",
+          "descricao": "Instrução em inglês: mesmos dados da linha de base e MESMAS chaves do esquema (titulo, url, conteudo, links)",
+          "checagens": {
+            "titulo_contem": ["biblioteca"],
+            "url_contem": ["localhost:8765/base.html"],
+            "conteudo_contem": ["15 de novembro", "120"],
+            "links_contem": ["educacao.html", "cultura.html", "prefeitura.html"]
+          }
+        }
+      ]
+    }
+  ]
+}

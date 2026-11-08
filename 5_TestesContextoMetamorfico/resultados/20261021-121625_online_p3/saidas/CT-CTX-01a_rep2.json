@@ -1,0 +1,10 @@
+[
+    {
+        "index": 0,
+        "error": false,
+        "tags": [
+            "error"
+        ],
+        "content": "LLM returned no content (finish_reason: stop)"
+    }
+]

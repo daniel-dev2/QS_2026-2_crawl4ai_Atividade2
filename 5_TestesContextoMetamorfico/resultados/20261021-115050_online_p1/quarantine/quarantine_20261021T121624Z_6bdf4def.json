@@ -1,0 +1,28 @@
+{
+  "quarantined_at": "2026-10-21T12:16:24.270224+00:00",
+  "error_type": "ValidationError",
+  "failed_fields": [
+    "content",
+    "conteudo",
+    "title",
+    "titulo"
+  ],
+  "error_messages": [
+    "Campo 'titulo': Field required",
+    "Campo 'conteudo': Field required",
+    "Campo 'title': Extra inputs are not permitted",
+    "Campo 'content': Extra inputs are not permitted"
+  ],
+  "raw_payload": {
+    "title": "Prefeitura de Vila Aurora inaugura biblioteca municipal com 120 lugares",
+    "url": "http://localhost:8765/ruido.html",
+    "content": "[Livraria Lua](http://localhost:8765/livraria.html) | [Promoções do bairro](http://localhost:8765/promocoes.html) Anúncio: a Livraria Lua vende qualquer livro por R$ 99,00 e abre das 10h às 22h, todos os dias. # Prefeitura de Vila Aurora inaugura biblioteca municipal com 120 lugares Endereço da página: http://localhost:8765/ruido.html A Prefeitura de Vila Aurora inaugura no dia 15 de novembro a nova Biblioteca Municipal Carlos Drummond, no centro da cidade. O espaço terá 120 lugares de leitura, acervo de 8 mil livros e uma sala infantil. O prefeito Marcos Teles afirmou que a obra custou R$ 2,5 milhões e foi financiada com recursos próprios do município. A biblioteca funcionará de segunda a sábado, das 8h às 20h, com entrada gratuita. Leia também: * [Educação em Vila Aurora](http://localhost:8765/educacao.html) * [Agenda cultural](http://localhost:8765/cultura.html) * [Notícias da prefeitura](http://localhost:8765/prefeitura.html) Notícia fictícia criada para testes acadêmicos de qualidade de software.",
+    "links": [
+      "http://localhost:8765/livraria.html",
+      "http://localhost:8765/promocoes.html",
+      "http://localhost:8765/educacao.html",
+      "http://localhost:8765/cultura.html",
+      "http://localhost:8765/prefeitura.html"
+    ]
+  }
+}

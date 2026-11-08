@@ -1,0 +1,14 @@
+{
+  "quarantined_at": "2026-10-21T11:50:49.342592+00:00",
+  "error_type": "ValidationError",
+  "failed_fields": [
+    "url"
+  ],
+  "error_messages": [
+    "Campo 'url': Field required"
+  ],
+  "raw_payload": {
+    "titulo": "Prefeitura de Vila Aurora inaugura biblioteca municipal com 120 lugares",
+    "conteudo": "Endereço da página: http://localhost:8765/base.html ... (the rest of the string)"
+  }
+}
