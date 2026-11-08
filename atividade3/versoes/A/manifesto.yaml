@@ -3,7 +3,7 @@ descricao: Baseline. Prompt simples (P1) da Atividade 2.
 data_registro: 2026-11-08
 codigo:
   repositorio: PREENCHER (repo da Atividade 3)
-  commit: dcdbd6f451497dd1c0adfdb1daa71e237ebe38ad
+  commit: 28428f04def3b3ff33c83c2a7896ed2d34813132
   script: extracao_g1.py
   origem: https://github.com/daniel-dev2/QS_2026-2_crawl4ai_Atividade2
 crawl4ai:
