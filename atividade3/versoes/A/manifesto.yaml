@@ -1,0 +1,35 @@
+versao: A
+descricao: Baseline. Prompt simples (P1) da Atividade 2.
+data_registro: 2026-11-08
+codigo:
+  repositorio: PREENCHER (repo da Atividade 3)
+  commit: dcdbd6f451497dd1c0adfdb1daa71e237ebe38ad
+  script: extracao_g1.py
+  origem: https://github.com/daniel-dev2/QS_2026-2_crawl4ai_Atividade2
+crawl4ai:
+  versao: 0.9.5
+modelo:
+  provedor: ollama
+  nome: qwen2.5:1.5b
+  digest: 65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b
+parametros:
+  temperature: 0   # PREENCHER depois de aplicar no código
+  extraction_type: schema
+  apply_chunking: true
+  chunk_token_threshold: 1000
+  keep_alive: 24h
+  cache_mode: BYPASS
+  word_count_threshold: 10
+schema: page_schema.json (PageExtractionSchema: titulo, url, conteudo, links)
+prompt:
+  id: P1
+  texto: "Extraia o título, a URL, o conteúdo e os links desta página."
+fonte_contexto:
+  paginas: PREENCHER (URLs e snapshot salvo de cada caso)
+casos_referencias: PREENCHER (P2)
+rubrica_limiar: PREENCHER (P1: tau, falha crítica)
+resultados: PREENCHER (P4, P5, P6)
+limitacoes:
+  - Modelo local sem garantia de determinismo mesmo com temperature 0.
+  - Páginas do g1 são ao vivo e podem mudar; usar snapshot salvo.
+  - Só o primeiro chunk válido é aproveitado pelo script.
