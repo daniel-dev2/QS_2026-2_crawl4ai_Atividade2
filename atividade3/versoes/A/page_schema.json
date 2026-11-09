@@ -1,0 +1,53 @@
+{
+  "additionalProperties": false,
+  "description": "Esquema padronizado para extração e auditoria de páginas web",
+  "example": {
+    "conteudo": "A garantia de qualidade de dados (Data QA) em pipelines de web scraping previne anomalias a jusante.",
+    "links": [
+      "https://crawler.example.org/artigos/crawl4ai-intro",
+      "https://crawler.example.org/docs"
+    ],
+    "titulo": "Exemplo de Artigo de Qualidade de Software",
+    "url": "https://crawler.example.org/artigos/qualidade-software"
+  },
+  "properties": {
+    "titulo": {
+      "description": "Título da página extraída. Deve ser uma string não vazia.",
+      "minLength": 1,
+      "title": "Titulo",
+      "type": "string"
+    },
+    "url": {
+      "description": "URL canônica ou de origem da página. Deve conter esquema http:// ou https:// válido.",
+      "format": "uri",
+      "maxLength": 2083,
+      "minLength": 1,
+      "title": "Url",
+      "type": "string"
+    },
+    "conteudo": {
+      "description": "Conteúdo textual principal ou corpo da página (tamanho mínimo representativo: 20 caracteres).",
+      "minLength": 20,
+      "title": "Conteudo",
+      "type": "string"
+    },
+    "links": {
+      "description": "Lista de hiperlinks válidos presentes na página.",
+      "items": {
+        "format": "uri",
+        "maxLength": 2083,
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Links",
+      "type": "array"
+    }
+  },
+  "required": [
+    "titulo",
+    "url",
+    "conteudo"
+  ],
+  "title": "PageExtractionSchema",
+  "type": "object"
+}
