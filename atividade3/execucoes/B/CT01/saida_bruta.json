@@ -1,0 +1,11 @@
+[
+    {
+        "titulo": "Biblioteca Comunitária Sol Nascente",
+        "url": "http://localhost:8000/ct01.html",
+        "conteudo": "A biblioteca funciona de segunda a sexta, das 8h às 17h. O empréstimo de livros é gratuito, por até 14 dias. Veja o [acervo](http://localhost:8000/acervo) ou fale pelo [contato](http://localhost:8000/contato).",
+        "links": [
+            "http://localhost:8000/acervo",
+            "http://localhost:8000/contato"
+        ]
+    }
+]

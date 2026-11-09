@@ -1,0 +1,11 @@
+[
+    {
+        "titulo": "Caderno Universitário 200 Folhas",
+        "url": "http://localhost:8000/ct02.html",
+        "conteudo": "Preço: R$ 18,90. Disponibilidade: em estoque. Capa dura, 10 matérias. Veja mais em [papelaria](http://localhost:8000/papelaria) ou vá ao [carrinho](http://localhost:8000/carrinho).",
+        "links": [
+            "http://localhost:8000/papelaria",
+            "http://localhost:8000/carrinho"
+        ]
+    }
+]

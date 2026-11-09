@@ -1,0 +1,27 @@
+{
+  "versao": "B",
+  "caso": "CT04",
+  "tipo": "funcional",
+  "url": "http://localhost:8000/ct04.html",
+  "fonte_html": "fontes/ct04.html",
+  "prompt_id": "PROMPT_P2",
+  "prompt_sha": "d57c19223a77fcfd",
+  "modelo": "ollama/qwen2.5:7b",
+  "temperature": 0,
+  "extra_args": {
+    "temperature": 0
+  },
+  "apply_chunking": true,
+  "chunk_token_threshold": 1000,
+  "word_count_threshold": 10,
+  "cache_mode": "BYPASS",
+  "inicio": "2026-11-09T00:59:34",
+  "crawl_success": true,
+  "erro": null,
+  "saida_vazia": false,
+  "json_valido": true,
+  "duracao_s": 5.6,
+  "chunk_com_erro_llm": false,
+  "saida_sha": "e960a99b4fc8ffa9",
+  "contexto_chars": 420
+}

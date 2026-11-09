@@ -1,0 +1,27 @@
+{
+  "versao": "B",
+  "caso": "CT06",
+  "tipo": "variacao_CT01",
+  "url": "http://localhost:8000/ct06.html",
+  "fonte_html": "fontes/ct06.html",
+  "prompt_id": "PROMPT_P2",
+  "prompt_sha": "d57c19223a77fcfd",
+  "modelo": "ollama/qwen2.5:7b",
+  "temperature": 0,
+  "extra_args": {
+    "temperature": 0
+  },
+  "apply_chunking": true,
+  "chunk_token_threshold": 1000,
+  "word_count_threshold": 10,
+  "cache_mode": "BYPASS",
+  "inicio": "2026-11-09T00:59:56",
+  "crawl_success": true,
+  "erro": null,
+  "saida_vazia": false,
+  "json_valido": true,
+  "duracao_s": 7.0,
+  "chunk_com_erro_llm": false,
+  "saida_sha": "64f54a22d0ff7784",
+  "contexto_chars": 258
+}
