@@ -1,35 +1,46 @@
 versao: A
-descricao: Baseline. Prompt simples (P1) da Atividade 2.
+descricao: Baseline. Prompt simples (P1) da Atividade 2 + regras de preenchimento comuns aos casos.
 data_registro: 2026-11-08
 codigo:
   repositorio: PREENCHER (repo da Atividade 3)
-  commit: 28428f04def3b3ff33c83c2a7896ed2d34813132
+  base_commit_atividade2: 28428f04def3b3ff33c83c2a7896ed2d34813132
+  commit: PREENCHER (commit desta versão no repo da Atividade 3)
   script: extracao_g1.py
   origem: https://github.com/daniel-dev2/QS_2026-2_crawl4ai_Atividade2
 crawl4ai:
-  versao: 0.9.5
+  versao: 0.9.3   # conforme execucoes/ambiente.json
 modelo:
-  provedor: ollama
-  nome: qwen2.5:1.5b
-  digest: 65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b
+  provedor: openrouter (API gratuita, via litellm/Crawl4AI)
+  nome: PREENCHER (modelo realmente usado; ver execucoes/ambiente.json)   # o Qwen2.5-VL-7B gratuito saiu do OpenRouter
+  revisao: não congelável (API; o provedor por trás do OpenRouter pode variar)
+  data_execucao: PREENCHER (P4, data da bateria)
 parametros:
-  temperature: 0   # PREENCHER depois de aplicar no código
+  temperature: 0   # aplicado no código (extra_args)
   extraction_type: schema
   apply_chunking: true
   chunk_token_threshold: 1000
-  keep_alive: 24h
   cache_mode: BYPASS
   word_count_threshold: 10
 schema: page_schema.json (PageExtractionSchema: titulo, url, conteudo, links)
 prompt:
   id: P1
-  texto: "Extraia o título, a URL, o conteúdo e os links desta página."
+  texto: |
+    Extraia o título, a URL, o conteúdo e os links desta página.
+
+    Regras de preenchimento:
+    1. titulo = texto do título principal da página (cabeçalho de nível 1).
+    2. url = a URL da página, sem alteração.
+    3. conteudo = resumo fiel do texto principal, sem menu, rodapé ou informação inventada.
+    4. links = links do corpo principal da página, excluindo menu e rodapé; lista vazia se não houver.
+    5. Se a página não tiver informação suficiente, declare isso em conteudo; não invente dados.
 fonte_contexto:
-  paginas: PREENCHER (URLs e snapshot salvo de cada caso)
-casos_referencias: PREENCHER (P2)
+  paginas: "casos/fontes/ct01..ct06.html (HTML fixo versionado), servidos em http://localhost:8000; contexto efetivamente enviado ao LLM salvo em execucoes/<versao>/<caso>/contexto_enviado_ao_llm.md"
+casos_referencias: casos/casos_teste.md, casos/referencias.md, casos/referencias.json
 rubrica_limiar: PREENCHER (P1: tau, falha crítica)
 resultados: PREENCHER (P4, P5, P6)
 limitacoes:
-  - Modelo local sem garantia de determinismo mesmo com temperature 0.
-  - Páginas do g1 são ao vivo e podem mudar; usar snapshot salvo.
+  - O Qwen2.5-7B gratuito não está mais disponível no OpenRouter; o modelo usado deve ser declarado e é o mesmo em A e B.
+  - Modelo via API (OpenRouter, tier gratuito): sem garantia de determinismo mesmo com temperature 0; provedor e revisão podem variar entre chamadas.
+  - Tier gratuito: 20 req/min e 50 req/dia; execuções com erro são registradas, não descartadas.
+  - Casos usam HTML sintético fixo (casos/fontes), sem dependência de site externo.
   - Só o primeiro chunk válido é aproveitado pelo script.
