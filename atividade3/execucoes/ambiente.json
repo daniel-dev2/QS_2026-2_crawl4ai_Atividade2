@@ -1,0 +1,10 @@
+{
+  "python": "3.13.16",
+  "so": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "crawl4ai": "0.9.5",
+  "modelo": "ollama/qwen2.5:7b",
+  "data_bateria": "2026-11-09T00:58:55",
+  "provedor": "ollama",
+  "ollama_list": "NAME          ID              SIZE      MODIFIED       \nqwen2.5:7b    845dbda0ea48    4.7 GB    13 minutes ago",
+  "nota": "modelo local no Ollama; digest em ollama_list"
+}

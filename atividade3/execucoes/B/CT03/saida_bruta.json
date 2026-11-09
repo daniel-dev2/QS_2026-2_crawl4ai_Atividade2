@@ -1,0 +1,11 @@
+[
+    {
+        "titulo": "Semana de Tecnologia 2026",
+        "url": "http://localhost:8000/ct03.html",
+        "conteudo": "De 18 a 20 de novembro de 2026, no Auditório B. Inscrições gratuitas até 14 de novembro. Consulte a [programação](http://localhost:8000/eventos/programacao) e faça sua [inscrição](http://localhost:8000/eventos/inscricao).",
+        "links": [
+            "http://localhost:8000/eventos/programacao",
+            "http://localhost:8000/eventos/inscricao"
+        ]
+    }
+]

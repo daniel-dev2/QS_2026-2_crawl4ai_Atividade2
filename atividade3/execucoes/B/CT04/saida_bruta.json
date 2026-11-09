@@ -1,0 +1,10 @@
+[
+    {
+        "titulo": "Novo laboratório de redes é inaugurado",
+        "url": "http://localhost:8000/ct04.html",
+        "conteudo": "O laboratório possui 20 computadores e foi inaugurado em 3 de setembro. Leia também: [estágios abertos](http://localhost:8000/noticias/estagios).",
+        "links": [
+            "http://localhost:8000/noticias/estagios"
+        ]
+    }
+]
