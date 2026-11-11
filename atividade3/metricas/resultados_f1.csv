@@ -1,0 +1,13 @@
+caso,versao,n_objetos_saida,tokens_resposta,tokens_referencia,tokens_comuns,precisao,recall,f1,tau,sinal_automatico,f1_texto_sensibilidade,sinal_texto_sensibilidade,saida_vazia,json_valido,url_exata,links_iguais,titulo_nulo,saida_sha
+CT01,A,0,0,34,0,0.0,0.0,0.0,0.5,reprova,0.0,reprova,1,True,0,0,0,4f53cda18c2baa0c
+CT02,A,0,0,26,0,0.0,0.0,0.0,0.5,reprova,0.0,reprova,1,True,0,0,0,4f53cda18c2baa0c
+CT03,A,1,53,36,36,0.6792,1.0,0.809,0.5,aprova,0.7119,aprova,0,True,1,1,0,86d9897f50afc74a
+CT04,A,0,0,28,0,0.0,0.0,0.0,0.5,reprova,0.0,reprova,1,True,0,0,0,4f53cda18c2baa0c
+CT05,A,0,0,18,0,0.0,0.0,0.0,0.5,reprova,0.0,reprova,1,True,0,0,0,4f53cda18c2baa0c
+CT06,A,0,0,34,0,0.0,0.0,0.0,0.5,reprova,0.0,reprova,1,True,0,0,0,4f53cda18c2baa0c
+CT01,B,1,53,34,34,0.6415,1.0,0.7816,0.5,aprova,0.6885,aprova,0,True,1,1,0,570c290bd015f4b8
+CT02,B,1,43,26,26,0.6047,1.0,0.7536,0.5,aprova,0.6047,aprova,0,True,1,1,0,59fe7c50af8c4af3
+CT03,B,1,53,36,36,0.6792,1.0,0.809,0.5,aprova,0.7119,aprova,0,True,1,1,0,86d9897f50afc74a
+CT04,B,1,37,28,28,0.7568,1.0,0.8615,0.5,aprova,0.8,aprova,0,True,1,1,0,e960a99b4fc8ffa9
+CT05,B,1,12,18,7,0.5833,0.3889,0.4667,0.5,reprova,0.2,reprova,0,True,1,1,1,18f9b5df7dc7dfb8
+CT06,B,1,54,34,29,0.537,0.8529,0.6591,0.5,aprova,0.5161,aprova,0,True,1,1,0,64f54a22d0ff7784
