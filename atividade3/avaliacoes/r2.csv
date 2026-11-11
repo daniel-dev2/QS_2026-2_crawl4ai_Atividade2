@@ -1,0 +1,5 @@
+ct,versao,correcao,relevancia,suporte,falha_critica,justificativa,resultado
+CT-01,A,0,0,0,1,Saída vazia,Reprovado
+CT-01,B,2,2,2,0,A saída atendeu a todos os requisitos do teste. Ela é correta e funcional,Aprovado
+CT-05,A,0,0,0,1,"Apesar da página estar em manutenção, ela ainda possui título e conteúdo",Reprovado
+CT-05,B,1,2,2,0,"A saída está correta, mas o título da página está ausente",Reprovado
