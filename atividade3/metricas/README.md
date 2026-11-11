@@ -31,16 +31,22 @@ atividade3/
 │   ├── registro_execucoes.csv      # Pessoa 4: metadados de cada execução
 │   ├── A/CT01..CT06/saida_bruta.json   # Pessoa 4: 6 saídas da versão A
 │   └── B/CT01..CT06/saida_bruta.json   # Pessoa 4: 6 saídas da versão B
+├── avaliacoes/
+│   ├── avaliacao_humana_R1.xlsx    # Pessoa 6: R1 das 12 saídas
+│   └── R2.csv                      # Pessoa 7: R2 de CT01 e CT05 (A e B); ajuste o caminho se o arquivo estiver em outra pasta (na branch da P7 ele se chama r2.csv)
 └── metricas/                       # <- ESTA PASTA (Pessoa 5)
     ├── README.md
     ├── calculo_f1.py
     ├── test_calculo_f1.py
     ├── grafico_f1.py
+    ├── montar_decisao_humana.py
     ├── concordancia_auto_humano.py
     ├── resultados_f1.csv           # gerado
     ├── resumo_f1.md                # gerado
     ├── grafico_f1.png              # gerado
-    └── tabela_auto_humano.csv      # gerado só depois que a decisão humana existir
+    ├── decisao_humana.csv          # gerado (R1)
+    ├── decisao_humana_sens_R2.csv  # gerado (sensibilidade)
+    └── tabela_auto_humano.csv      # gerado
 ```
 
 ## 4. Como executar (passo a passo)
@@ -61,9 +67,15 @@ python calculo_f1.py
 python grafico_f1.py
 #    gera grafico_f1.png
 
-# 4) SOMENTE depois que a Pessoa 6 (R1) e a Pessoa 7 (consenso) fecharem a decisão humana:
-python concordancia_auto_humano.py --humano ../avaliacoes/decisao_humana.csv
-#    gera tabela_auto_humano.csv e imprime iguais/12, aprovação humana por versão e as divergências
+# 4) montar a decisão humana final a partir do R1 (Pessoa 6) e do R2 (Pessoa 7)
+python montar_decisao_humana.py --r1 ../avaliacoes/avaliacao_humana_R1.xlsx \
+    --r2 ../avaliacoes/R2.csv --saida decisao_humana.csv --sensibilidade
+#    gera decisao_humana.csv (decisão operacional = R1) e decisao_humana_sens_R2.csv;
+#    imprime a comparação R1 x R2 nas 4 saídas revisadas (.xlsx exige: pip install openpyxl)
+
+# 5) calcular a concordância automático-humano (M3) e listar divergências
+python concordancia_auto_humano.py --humano decisao_humana.csv
+#    gera tabela_auto_humano.csv e imprime iguais/12, aprovação humana por versão e divergências
 ```
 
 Opções úteis do `calculo_f1.py`:
@@ -74,7 +86,7 @@ Opções úteis do `calculo_f1.py`:
 | `--raiz` | pasta pai da pasta do script | Caminho da pasta `atividade3/`, caso o script esteja em outro lugar. |
 | `--saida` | `<raiz>/metricas` | Pasta onde gravar os resultados. |
 
-**Formato do arquivo `decisao_humana.csv`** (a ser montado a partir de R1 e, em CT01/CT05, do consenso; uma linha por saída):
+**Formato do arquivo `decisao_humana.csv`** (gerado pelo passo 4; uma linha por saída). Se o grupo registrar um consenso formal em CT01 e CT05, passe `--consenso consenso.csv` (colunas `caso,versao,aprovacao_humana`) para ele prevalecer nessas saídas:
 
 ```csv
 caso,versao,aprovacao_humana
@@ -93,9 +105,11 @@ Aceita `1/0` ou `aprova/reprova`. Aprovação humana = três notas 2 **e** nenhu
 | `resultados_f1.csv` | **Entregável principal.** Uma linha por saída (12), com contagens de tokens, P, R, F1, sinal e colunas diagnósticas (seção 6). |
 | `resumo_f1.md` | Tabela legível das 12 saídas e as médias/medianas por versão, pronta para consultar ou colar no relatório. |
 | `grafico_f1.py` / `grafico_f1.png` | Gráfico de barras do F1 por caso e versão, com a linha do τ. Atende ao "gráfico ou visualização" da Parte E. |
+| `montar_decisao_humana.py` | Lê o R1 (`.xlsx`/`.csv`) e o R2 (`.csv`), normaliza nomes (`CT-01` → `CT01`, `SIM`/`Aprovado` → aprova), confere a regra de aprovação, compara R1 × R2 nas 4 saídas revisadas e grava `decisao_humana.csv`. |
 | `concordancia_auto_humano.py` | Cruza o sinal automático com a decisão humana final: calcula M3 (iguais/12) e lista as divergências, que são o ponto de partida da análise obrigatória. |
+| `decisao_humana.csv` / `decisao_humana_sens_R2.csv` | Decisão humana por saída (R1) e variante em que as 4 saídas do R2 usam a decisão do R2 (análise de sensibilidade). |
 | `tabela_auto_humano.csv` | Saída do script anterior: F1, sinal, decisão humana e se concordam, por saída. |
-| `test_calculo_f1.py` | 13 testes unitários que verificam tokenização, casos extremos e um cálculo conferido à mão (CT05/B). |
+| `test_calculo_f1.py` | 15 testes unitários: tokenização, casos extremos, um cálculo conferido à mão (CT05/B) e a normalização da decisão humana. |
 | `README.md` | Este documento. |
 
 ## 6. Colunas do `resultados_f1.csv`
@@ -186,7 +200,7 @@ Esse valor está em `test_calculo_f1.py` como teste automático.
 
 ## 10. Como testar e conferir os resultados
 
-1. **Testes automáticos:** `python -m unittest -v test_calculo_f1.py` deve terminar com `Ran 13 tests ... OK`. Eles cobrem a tokenização ("8h", "18,90", datas, URLs), resposta vazia, ausência de sobreposição, multiconjunto, erro por referência vazia e o cálculo manual de CT05/B.
+1. **Testes automáticos:** `python -m unittest -v test_calculo_f1.py` deve terminar com `Ran 15 tests ... OK`. Eles cobrem a tokenização ("8h", "18,90", datas, URLs), resposta vazia, ausência de sobreposição, multiconjunto, erro por referência vazia, o cálculo manual de CT05/B e a normalização de `caso` e `aprovação` das avaliações humanas.
 2. **Quantidade:** `resultados_f1.csv` deve ter exatamente **12 linhas de dados** (6 casos × 2 versões).
 3. **Conferência manual:** escolha uma linha, conte os tokens do JSON de saída e da referência e confira `tokens_comuns`, P, R e F1 com as fórmulas da seção 7. A seção 7.6 mostra um caso completo.
 4. **Reprodutibilidade:** rodar `calculo_f1.py` duas vezes deve gerar arquivos idênticos (não há aleatoriedade).
@@ -199,7 +213,7 @@ Esse valor está em `test_calculo_f1.py` como teste automático.
 | A | 0,135 | 0,000 | 1/6 |
 | B | 0,722 | 0,768 | 5/6 |
 
-A interpretação (saídas vazias de A, CT03 idêntica nas duas versões, CT05 e CT06 em B como casos-limite) está na seção 4 do relatório (`secao_relatorio_pessoa5.md`). **A concordância M3 ainda depende da decisão humana final.**
+**Concordância automático–humano (M3): 12/12**, usando a decisão do R1 (Pessoa 6). Aprovação humana: A 1/6 e B 5/6, igual ao sinal automático. Não houve divergência; o caso-limite é CT05/B (F1 = 0,467, reprovado pelo F1 e pelo humano, por razões diferentes). Trocando o R1 pelo R2 nas 4 saídas revisadas, o resultado continua 12/12. Cinco dos 12 acordos vêm das saídas vazias de A. A interpretação está na seção 4 do relatório (`secao_relatorio_pessoa5.md`).
 
 ## 12. Dependências com as outras pessoas
 
@@ -209,7 +223,7 @@ A interpretação (saídas vazias de A, CT03 idêntica nas duas versões, CT05 e
 | `referencias.json` | Pessoa 2 | Texto de referência de cada caso. |
 | Versões A/B documentadas | Pessoa 3 | Saber qual prompt gerou cada saída. |
 | 12 `saida_bruta.json` e `registro_execucoes.csv` | Pessoa 4 | Entrada do cálculo. |
-| Decisão humana final (R1 + consenso em CT01/CT05) | Pessoas 6 e 7 | Calcular M3 e analisar divergências. |
+| R1 (`avaliacao_humana_R1.xlsx`) e R2 (`R2.csv`); consenso formal, se houver | Pessoas 6 e 7 | Calcular M3 e analisar divergências. |
 
 ## 13. Solução de problemas
 
@@ -219,5 +233,7 @@ A interpretação (saídas vazias de A, CT03 idêntica nas duas versões, CT05 e
 | `FileNotFoundError: casos/referencias.json` | A pasta `casos/` não está em `atividade3/` ou `--raiz` aponta para o lugar errado. |
 | `ValueError: Referencia sem tokens` | Alguma referência está vazia ou sem palavras. Corrija o caso; não mude o script. |
 | `Sem decisao humana para: [...]` | O `decisao_humana.csv` não tem as 12 linhas. |
+| `AVISO: ... R1 inconsistente com a regra` | A coluna de aprovação do R1 não bate com a regra (três notas 2 e falha crítica 0). Corrija com a Pessoa 6. |
+| `Para ler .xlsx: pip install openpyxl` | Instale `openpyxl` ou exporte a aba do R1 para CSV. |
 | `ModuleNotFoundError: matplotlib` | Só afeta o gráfico: `pip install matplotlib`. |
 | Acentos quebrados ao abrir o CSV | Abra como UTF-8 (no Excel: Dados → Obter dados → De texto/CSV → UTF-8). |
