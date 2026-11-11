@@ -20,6 +20,6 @@ Commit/tag/release: [Release v0.9.3](https://github.com/unclecode/crawl4ai/relea
 ## Entregas
 URL para vídeo no YouTube: [https://www.youtube.com/watch?v=1AWzGdqc-mg](https://www.youtube.com/watch?v=1AWzGdqc-mg)
 
-Link para slides: [https://github.com/daniel-dev2/QS_2026-2_crawl4ai_Atividade2/blob/main/Qualidade%20de%20software%20-%20Atv%202.pdf](https://github.com/daniel-dev2/QS_2026-2_crawl4ai_Atividade2/blob/main/Qualidade%20de%20software%20-%20Atv%202.pdf)
+Link para slides: [https://github.com/daniel-dev2/QS_2026-2_crawl4ai_Atividade3/blob/main/Slide%20Atividade%203%20-%20Qualidade%20de%20Software.pdf](https://github.com/daniel-dev2/QS_2026-2_crawl4ai_Atividade3/blob/main/Slide%20Atividade%203%20-%20Qualidade%20de%20Software.pdf)
 
-Link para relatório em PDF: [https://github.com/daniel-dev2/QS_2026-2_crawl4ai_Atividade2/blob/main/QUALIDADE%20DE%20SOFTWARE%20-%20Atividade%202.pdf](https://github.com/daniel-dev2/QS_2026-2_crawl4ai_Atividade2/blob/main/QUALIDADE%20DE%20SOFTWARE%20-%20Atividade%202.pdf) 
+Link para relatório em PDF: [https://github.com/daniel-dev2/QS_2026-2_crawl4ai_Atividade3/blob/main/Relat%C3%B3rio%20Atividade%203%20-%20Qualidade%20de%20Software.pdf](https://github.com/daniel-dev2/QS_2026-2_crawl4ai_Atividade3/blob/main/Relat%C3%B3rio%20Atividade%203%20-%20Qualidade%20de%20Software.pdf) 
